@@ -1,6 +1,6 @@
 # Satellite-Based-Counting
 
-Code for Drone-Based Car Counting via Density Map Learning (VCIP 2020) and Satellite-Based Object Counting via Adaptive Density Map Learning.
+Code for Drone-Based Car Counting via Density Map Learning (VCIP 2020) and Satellite-Based Object Counting via Adaptive Density Map Assisted Learning.
 
 Pre-trained models
 ---
