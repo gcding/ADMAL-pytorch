@@ -39,6 +39,14 @@ We will release more trained models soon.
 The core code will be released after the journal paper is accepted.
 Please see the paper for more details.
 
+Data set
+---
+We propose a Tree data set, The download link is:
+[Baidu Cloud]([https://pan.baidu.com/s/1pbfkCU6ROBTVPsBpmuLtCA](https://pan.baidu.com/s/1UcCdhvq40_eOF4LyKxY63g?pwd=Tree)) : Tree
+
+We have only shared the training and validation set images and annotations.
+If you are interested in this data set, please contact us (Email address at the bottom) for a test set.
+
 
 Citation
 ---
