@@ -22,6 +22,8 @@ numpy 1.19.2
 
 matplotlib 3.3.4
 
+nni 2.6.1 (Optional)
+
 Usage
 ---
 We provide the test code for our model. 
