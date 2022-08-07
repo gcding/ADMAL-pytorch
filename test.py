@@ -7,6 +7,7 @@ from networks.Counter import Counter
 import numpy as np
 from PIL import Image
 from matplotlib import pyplot as plt
+from nni.compression.pytorch.utils.counter import count_flops_params
 
 import getopt
 import sys
@@ -38,12 +39,18 @@ getopt.getopt(sys.argv[1:], '', [strParameter[2:] + '=' for strParameter in sys.
 
 torch.cuda.set_device(arguments_intDevice)
 
+#  If you want to test the average inference speed, please rewrite it yourself to read the images of the whole dataset.
 def evaluate(img_path, save_path):
     if arguments_strModel == "ADML":
         net = Counter(model_name = arguments_strModel, mode = arguments_strMode)
         net.load_state_dict(torch.load(arguments_strModelStateDict, map_location=lambda storage, loc: storage), strict=False)
         net.cuda()
         net.eval()
+        # Flops  is calculated with an image size of 224*224.
+        # img_test = torch.randn(1, 3, 224, 224)
+        # img_test_1 = torch.randn(1, 1, 224, 224)
+        # flops, params, results = count_flops_params(net, (img_test, img_test_1))
+        # print(params / (1000*1000), flops / (1000*1000*1000))
     elif arguments_strModel == "ASPDNet":
         net = Counter(model_name = arguments_strModel, mode = arguments_strMode)
         net.load_state_dict(torch.load(arguments_strModelStateDict, map_location=lambda storage, loc: storage), strict=False)
@@ -67,8 +74,14 @@ def evaluate(img_path, save_path):
     img = data_list
 
     with torch.no_grad():
+        
         img = Variable(img).cuda()
+        torch.cuda.synchronize() 
+        start_time = time.time()
         pred_map = net.test_forward(img, None)
+        torch.cuda.synchronize()
+        end_time = time.time()
+        diff_time = start_time - end_time
 
     pred_map = pred_map.cpu().data.numpy()[0,0,:,:]
     pred = np.sum(pred_map)/100.0
