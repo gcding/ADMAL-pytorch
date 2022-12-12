@@ -51,19 +51,50 @@ We have only shared the training and validation set images and annotations.
 If you are interested in this data set, please contact us (Email address at the bottom) for a test set.
 
 
-Citation
+Citation (We copy the information from DBLP)
 ---
 
 ```
-@INPROCEEDINGS{9301785,
-  author={Huang, Jingxian and Ding, Guanchen and Guo, Yujia and Yang, Daiqin and Wang, Sihan and Wang, Tao and Zhang, Yunfei},
-  booktitle={2020 IEEE International Conference on Visual Communications and Image Processing (VCIP)}, 
-  title={Drone-Based Car Counting via Density Map Learning}, 
-  year={2020},
-  volume={},
-  number={},
-  pages={239-242},
-  doi={10.1109/VCIP49819.2020.9301785}}
+@article{DBLP:journals/tgrs/DingCYWWZ22,
+  author    = {Guanchen Ding and
+               Mingpeng Cui and
+               Daiqin Yang and
+               Tao Wang and
+               Sihan Wang and
+               Yunfei Zhang},
+  title     = {Object Counting for Remote-Sensing Images via Adaptive Density Map-Assisted
+               Learning},
+  journal   = {{IEEE} Trans. Geosci. Remote. Sens.},
+  volume    = {60},
+  pages     = {1--11},
+  year      = {2022},
+  url       = {https://doi.org/10.1109/TGRS.2022.3208326},
+  doi       = {10.1109/TGRS.2022.3208326},
+  timestamp = {Sun, 13 Nov 2022 17:52:29 +0100},
+  biburl    = {https://dblp.org/rec/journals/tgrs/DingCYWWZ22.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{DBLP:conf/vcip/HuangDGYWWZ20,
+  author    = {Jingxian Huang and
+               Guanchen Ding and
+               Yujia Guo and
+               Daiqin Yang and
+               Sihan Wang and
+               Tao Wang and
+               Yunfei Zhang},
+  title     = {Drone-Based Car Counting via Density Map Learning},
+  booktitle = {2020 {IEEE} International Conference on Visual Communications and
+               Image Processing, {VCIP} 2020, Macau, China, December 1-4, 2020},
+  pages     = {239--242},
+  publisher = {{IEEE}},
+  year      = {2020},
+  url       = {https://doi.org/10.1109/VCIP49819.2020.9301785},
+  doi       = {10.1109/VCIP49819.2020.9301785},
+  timestamp = {Wed, 27 Jan 2021 14:35:06 +0100},
+  biburl    = {https://dblp.org/rec/conf/vcip/HuangDGYWWZ20.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
 ```
 
 Acknowledgement
